@@ -1,0 +1,62 @@
+[
+  {
+    "id": "hilltop-residence",
+    "title": "Hilltop Modernist Residence",
+    "location": "Ngong Hills, Kenya",
+    "year": 2024,
+    "type": "Residential",
+    "description": "An elevated home embracing the hillside, featuring brutalist geometry with warm textures and sustainable materials. The design integrates with the natural landscape, offering panoramic views while maintaining privacy and connection to nature.",
+    "images": [
+      "../assets/images/hilltop-1.jpg",
+      "../assets/images/hilltop-2.jpg",
+      "../assets/images/hilltop-3.jpg"
+    ],
+    "tools_used": ["Revit", "AutoCAD", "Twinmotion"],
+    "testimonial": "Jonathan translated our dreams into space. The way he understood our lifestyle and created a home that feels both grand and intimate is truly visionary."
+  },
+  {
+    "id": "atrium-cowork",
+    "title": "The Atrium Co-Work Hub",
+    "location": "Nairobi CBD",
+    "year": 2023,
+    "type": "Commercial",
+    "description": "A daylight-maximizing co-working space infused with glass, steel, and foliage. The central atrium creates a community focal point while private workspaces maintain productivity. Biophilic design elements promote wellness and creativity.",
+    "images": [
+      "../assets/images/atrium-exterior.jpg",
+      "../assets/images/atrium-interior.jpg",
+      "../assets/images/atrium-detail.jpg"
+    ],
+    "tools_used": ["SketchUp", "V-Ray", "Photoshop"],
+    "testimonial": "Elegant, functional, and inspiring. Jonathan created a place that breathes productivity while still feeling warm and inviting. Our members consistently comment on how the space elevates their work experience."
+  },
+  {
+    "id": "coastal-pavilion",
+    "title": "Coastal Cultural Pavilion",
+    "location": "Diani Beach, Kenya",
+    "year": 2022,
+    "type": "Cultural",
+    "description": "An open-air pavilion celebrating coastal heritage through contemporary form. The structure uses local materials and traditional construction techniques reinterpreted through a modern lens. Passive cooling strategies eliminate the need for mechanical systems.",
+    "images": [
+      "../assets/images/coastal-1.jpg",
+      "../assets/images/coastal-2.jpg",
+      "../assets/images/coastal-night.jpg"
+    ],
+    "tools_used": ["Rhino", "Grasshopper", "Lumion"],
+    "testimonial": "Jonathan's pavilion design respects our traditions while looking boldly toward the future. The way the space transforms from day to night creates a magical environment for our cultural events."
+  },
+  {
+    "id": "urban-micro",
+    "title": "Urban Micro-Housing",
+    "location": "Westlands, Nairobi",
+    "year": 2023,
+    "type": "Residential",
+    "description": "Compact urban living spaces that maximize functionality without sacrificing comfort or style. These apartments use clever storage solutions, transformable furniture, and strategic lighting to create homes that feel spacious despite their limited footprint.",
+    "images": [
+      "../assets/images/micro-living.jpg",
+      "../assets/images/micro-kitchen.jpg",
+      "../assets/images/micro-bedroom.jpg"
+    ],
+    "tools_used": ["ArchiCAD", "Corona Renderer", "Adobe Suite"],
+    "testimonial": "I never thought 40 square meters could feel so complete. Jonathan's design has transformed how I think about urban living—every inch is purposeful yet beautiful."
+  }
+]
