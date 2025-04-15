@@ -70,11 +70,19 @@ export function ProjectGallery({ projectsRef }: ProjectGalleryProps) {
                         <AspectRatio ratio={4/3}>
                           <div className="w-full h-full bg-architect-sand/20 overflow-hidden">
                             {/* Using placeholder, in a real implementation this would be an actual image */}
-                            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-architect-sand/40 to-architect-concrete/60">
-                              <span className="text-xl text-architect-charcoal/50">
-                                {project.title} Image
-                              </span>
-                            </div>
+                            {project.images && project.images.length > 0 ? (
+                              <img
+                                src={project.images[0]}
+                                alt={`${project.title}`}
+                                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                              />  
+                            ) : (
+                              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-architect-sand/40 to-architect-concrete/60 text-architect-charcoal/50">
+                                <span className="text-xl text-architecct-charcoal/50">
+                                  {project.title} Image
+                                </span>
+                              </div>
+                            )} 
                           </div>
                         </AspectRatio>
                         
@@ -107,10 +115,20 @@ export function ProjectGallery({ projectsRef }: ProjectGalleryProps) {
                   {selectedProject && (
                     <div className="flex flex-col">
                       <AspectRatio ratio={16/9}>
-                        <div className="w-full h-full bg-architect-sand/20 flex items-center justify-center">
-                          <span className="text-2xl text-architect-charcoal/50">
-                            {selectedProject.title} - Image {currentImageIndex + 1}
-                          </span>
+                        <div className="w-full h-full bg-architect-sand/20 flex items-center justify-center relative">
+                          {selectedProject.images && selectedProject.images.length > 0 ? (
+                            <img
+                              src={selectedProject.images[currentImageIndex]}
+                              alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
+                              className="object-cover w-full h-full transition-transform duration-300"
+                            />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-architect-sand/40 to-architect-concrete/60 text-architect-charcoal/50">
+                              <span className="text-xl text-architecct-charcoal/50">
+                                {selectedProject.title} - Image {currentImageIndex + 1}
+                              </span>
+                            </div>
+                          )}
                         </div>
                       </AspectRatio>
                       
@@ -145,20 +163,23 @@ export function ProjectGallery({ projectsRef }: ProjectGalleryProps) {
                           </blockquote>
                         )}
                         
-                        <div className="flex gap-2 mt-4">
-                          {selectedProject.images.map((_, index) => (
-                            <button
-                              key={index}
-                              onClick={() => setCurrentImageIndex(index)}
-                              className={`w-2 h-2 rounded-full ${
-                                index === currentImageIndex 
-                                  ? "bg-architect-charcoal" 
-                                  : "bg-architect-charcoal/30"
-                              }`}
-                              aria-label={`View image ${index + 1}`}
-                            />
-                          ))}
-                        </div>
+                        {/*Image Navigation Dots*/}
+                        {selectedProject.images && selectedProject.images.length > 1 && (
+                          <div className="flex gap-2 mt-4">
+                            {selectedProject.images.map((_, index) => (
+                              <button
+                                key={index}
+                                onClick={() => setCurrentImageIndex(index)}
+                                className={`w-2 h-2 rounded-full ${
+                                  index === currentImageIndex 
+                                    ? "bg-architect-charcoal" 
+                                    : "bg-architect-charcoal/30"
+                                }`}
+                                aria-label={`View image ${index + 1}`}
+                              />
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </div>
                   )}
