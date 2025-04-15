@@ -53,8 +53,8 @@ export function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto relative">
-          <div className="relative overflow-hidden py-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="relative py-12">
             {/* Decorative quote marks */}
             <div className="absolute top-0 left-0 text-architect-charcoal/10 text-9xl font-serif">
               "
@@ -64,7 +64,7 @@ export function Testimonials() {
             </div>
 
             {/* Testimonial slider */}
-            <div className="relative">
+            <div className="min-h-[200px] md:min-h-[180px] relative">
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.id}
